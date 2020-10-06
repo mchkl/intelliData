@@ -1,10 +1,26 @@
 const globalStyle = {
-  padding: '20px',
-  width: '100%',
+  padding: '10px',
+
+  '@media(min-width: 480px)': {
+    padding: '20px'
+  },
+
+  ' h1': {
+    fontSize: '23px',
+    margin: '10px 0',
+
+    '@media(min-width: 480px)': {
+      fontSize: '1.5em'
+    }
+  },
 
   ' p': {
-    fontSize: '14px',
-    margin: 0
+    fontSize: '12px',
+    margin: 0,
+
+    '@media(min-width: 480px)': {
+      fontSize: '14px'
+    }
   },
 
   ' .text-sm': {

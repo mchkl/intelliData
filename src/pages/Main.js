@@ -34,7 +34,7 @@ const Test = ({ data }) => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: '40px',
+      marginTop: '20px',
       flexFlow: 'column',
 
       ' div:first-of-type': {
@@ -42,6 +42,7 @@ const Test = ({ data }) => {
       },
 
       '@media(min-width: 950px)': {
+        marginTop: '40px',
         flexFlow: 'row'
       }
     }

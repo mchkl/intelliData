@@ -6,6 +6,7 @@ export const Table = ({ tableData, onClick, chosenGraph }) => {
     maxWidth: '500px',
 
     ' .asterisk-text': {
+      marginTop: '5px',
       textAlign: 'left'
     }
   };

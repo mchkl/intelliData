@@ -13,7 +13,7 @@ import { connect } from 'react-redux';
 
 const Graph = ({ chartData, isMobile }) => (
   <LineChart
-    width={isMobile ? 30 : 500}
+    width={isMobile ? 350 : 500}
     height={isMobile ? 150 : 300}
     margin={{
       top: 5,
@@ -24,11 +24,21 @@ const Graph = ({ chartData, isMobile }) => (
   >
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="times">
-      <Label value="Time" offset={-5} position="insideBottom" />
+      <Label
+        value="Time"
+        offset={-5}
+        position="insideBottom"
+        fontSize={isMobile ? 12 : 14}
+      />
     </XAxis>
     <YAxis
       domain={[0, dataMax => Math.floor(dataMax) * 2]}
-      label={{ value: 'Values', angle: -90, position: 'insideLeft' }}
+      label={{
+        value: 'Values',
+        angle: -90,
+        position: 'insideLeft',
+        fontSize: isMobile ? 12 : 14
+      }}
     />
     <Tooltip content={CustomTooltip} />
     <Line
